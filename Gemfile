@@ -1,19 +1,20 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.3.7'
+ruby '2.3.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
 # Use sqlite3 as the database for Active Record
 group :development, :test do
-gem 'sqlite3'
+  gem 'sqlite3'
 end
+
 group :production do
-gem 'pg'
- # enabling features such as static asset serving and logging on Heroku
-gem 'rails_12factor'
+  gem 'pg', '~> 0.18'
 end
+#Use Carrierwave as image uploader
+gem 'carrierwave', '~> 1.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
