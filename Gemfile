@@ -7,12 +7,11 @@ ruby '2.3.7'
 gem 'rails', '~> 5.2.1'
 # Use sqlite3 as the database for Active Record
 group :development, :test do
-gem 'sqlite3'
+  gem 'sqlite3'
 end
+
 group :production do
-gem 'pg'
- # enabling features such as static asset serving and logging on Heroku
-gem 'rails_12factor'
+  gem 'pg', '~> 0.18'
 end
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
